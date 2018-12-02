@@ -3,7 +3,7 @@ RUN go get github.com/prometheus/node_exporter
 RUN GOOS=linux CGO_ENABLED=0 go install github.com/prometheus/node_exporter
 
 FROM        quay.io/prometheus/busybox:glibc
-LABEL maintainer="The Prometheus Authors <prometheus-developers@googlegroups.com>"
+LABEL maintainer="Philipp Hellmich <phil@hellmi.de>"
 
 COPY --from=0 /go/bin/node_exporter /bin/node_exporter
 
