@@ -16,5 +16,5 @@ This image uses the docker multi-stage build feature in order to reduce the imag
 Install
 ----
 
-In order to use this image instead of the offical image change the image setting in kubeadm-kuberouter-all-features.yaml from cloudnativelabs/node_exporter to runningman84/node_exporter
+In order to use this image instead of the offical image change the image.repository setting in prometheus-node-exporter helm chart from quay.io/prometheus/node-exporter to runningman84/node_exporter and the image.tag to latest
 
