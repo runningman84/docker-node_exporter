@@ -1,4 +1,4 @@
-Kube Router
+Node Exporter
 ============
 
 [![](https://images.microbadger.com/badges/version/runningman84/node_exporter.svg)](https://hub.docker.com/r/runningman84/node_exporter "Get your own image badge on microbadger.com")
@@ -16,5 +16,12 @@ This image uses the docker multi-stage build feature in order to reduce the imag
 Install
 ----
 
-In order to use this image instead of the offical image change the image.repository setting in prometheus-node-exporter helm chart from quay.io/prometheus/node-exporter to runningman84/node_exporter and the image.tag to latest
+In order to use this image instead of the offical image change the image.repository setting in prometheus-node-exporter helm chart from quay.io/prometheus/node-exporter to runningman84/node_exporter and the image.tag to latest.
 
+This is my values.yaml for the prometheus-operator:
+```shell
+prometheus-node-exporter:
+  image:
+    repository: runningman84/node_exporter
+    tag: latest
+```
